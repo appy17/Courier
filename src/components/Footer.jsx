@@ -45,7 +45,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 text-white text-xl font-bold mb-4">
               <FaCube className="text-orange-500" />
-              Qurirabox
+              FastCourier
             </div>
 
             <p className="text-gray-400">
