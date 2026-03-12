@@ -40,22 +40,24 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-24 bg-[#f6efe5]" >
+    <section className="py-14 md:py-20 lg:py-24 bg-[#f6efe5]">
 
-      <h2 className="text-4xl font-bold text-center mb-12">
+      {/* Heading */}
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 px-4">
         What Our Customers Say
       </h2>
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <Swiper
           modules={[Autoplay, Pagination]}
-          spaceBetween={30}
-          slidesPerView={3}
-          autoplay={{ delay: 3000 }}
+          spaceBetween={24}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
+
           breakpoints={{
             0: { slidesPerView: 1 },
+            640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 }
           }}
@@ -65,23 +67,23 @@ export default function Testimonials() {
 
             <SwiperSlide key={index}>
 
-              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+              <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg text-center h-full">
 
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-16 h-16 mx-auto rounded-full mb-4"
+                  className="w-14 h-14 sm:w-16 sm:h-16 mx-auto rounded-full mb-4"
                 />
 
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 text-sm sm:text-base mb-4">
                   "{item.text}"
                 </p>
 
-                <h3 className="font-semibold text-lg">
+                <h3 className="font-semibold text-base sm:text-lg">
                   {item.name}
                 </h3>
 
-                <p className="text-sm text-gray-500">
+                <p className="text-xs sm:text-sm text-gray-500">
                   {item.role}
                 </p>
 

@@ -37,41 +37,49 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="py-20 bg-[#f6efe5]">
+    <div className="py-14 md:py-20 bg-[#f6efe5]">
 
-      <h2 className="text-4xl font-bold text-center mb-12 dark:text-white">
+      {/* Heading */}
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 dark:text-white px-4">
         Courier Pricing Plans
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-8 px-10">
+      {/* Cards */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
 
         {plans.map((plan, index) => (
           <motion.div
             key={index}
             whileHover={{ scale: 1.05 }}
-            className={`p-8 rounded-xl shadow-lg bg-white dark:bg-gray-800 
+            className={`p-6 sm:p-8 rounded-xl shadow-lg bg-white dark:bg-gray-800 
+            transition-all
             ${plan.highlight ? "border-4 border-orange-500" : ""}`}
           >
 
-            <h3 className="text-2xl font-semibold mb-4 dark:text-white">
+            {/* Plan Name */}
+            <h3 className="text-xl sm:text-2xl font-semibold mb-4 dark:text-white">
               {plan.name}
             </h3>
 
-            <p className="text-4xl font-bold text-orange-600 mb-6">
+            {/* Price */}
+            <p className="text-3xl sm:text-4xl font-bold text-orange-600 mb-6">
               {plan.price}
             </p>
 
-            <ul className="space-y-3 text-orange-600 dark:text-gray-300">
+            {/* Features */}
+            <ul className="space-y-3 text-sm sm:text-base text-gray-700 dark:text-gray-300">
 
               {plan.features.map((item, i) => (
-                <li key={i}>
-                  ✔ {item}
+                <li key={i} className="flex gap-2">
+                  <span className="text-orange-500">✔</span>
+                  {item}
                 </li>
               ))}
 
             </ul>
 
-            <button className="mt-6 w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-700">
+            {/* Button */}
+            <button className="mt-6 w-full bg-orange-500 text-white py-2.5 sm:py-3 rounded-lg hover:bg-orange-700 transition">
               Choose Plan
             </button>
 
@@ -79,6 +87,7 @@ export default function Pricing() {
         ))}
 
       </div>
+
     </div>
   );
 }

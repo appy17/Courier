@@ -7,7 +7,7 @@ export default function Loader() {
       <div className="w-[300px] relative">
 
         <motion.div
-          animate={{ x: [-120, 120] }}
+          animate={{ x: [120, -120] }}
           transition={{ repeat: Infinity, duration: 2 }}
           className="text-5xl"
         >
