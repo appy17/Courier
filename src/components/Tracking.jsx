@@ -3,7 +3,7 @@ import { FaSearchLocation } from "react-icons/fa";
 
 export default function Tracking() {
   return (
-    <section className="py-14 md:py-20 lg:py-24 bg-[#f6efe5]">
+    <section id="tracking" className="py-14 md:py-20 lg:py-24 bg-[#f6efe5]">
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center px-4 sm:px-6">
 

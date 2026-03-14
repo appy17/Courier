@@ -37,7 +37,7 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="py-14 md:py-20 bg-[#f6efe5]">
+    <div id="pricing" className="py-14 md:py-20 bg-[#f6efe5]">
 
       {/* Heading */}
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 dark:text-white px-4">

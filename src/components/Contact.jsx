@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
-    <section
+    <section id="contact"
       className="py-14 md:py-20 lg:py-24 bg-[#f6efe5] bg-no-repeat bg-cover"
       style={{
         backgroundImage: "url('/images/hero-header-bg.png')"

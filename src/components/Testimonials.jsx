@@ -40,7 +40,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-14 md:py-20 lg:py-24 bg-[#f6efe5]">
+    <section id="about" className="py-14 md:py-20 lg:py-24 bg-[#f6efe5]">
 
       {/* Heading */}
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 px-4">
