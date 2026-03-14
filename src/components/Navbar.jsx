@@ -242,9 +242,12 @@ export default function Navbar() {
               Login
             </a>
 
-            <button className="flex-1 px-4 py-2 bg-orange-500 text-white rounded-lg">
+            <a
+              href="/auth"
+              className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition inline-block"
+            >
               Register
-            </button>
+            </a>
           </div>
         </div>
       </motion.div>
