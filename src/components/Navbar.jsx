@@ -177,14 +177,14 @@ export default function Navbar() {
           </div>
 
           <a
-            href="/auth"
+            href="/login"
             className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition inline-block"
           >
             Login
           </a>
 
           <a
-            href="/auth"
+            href="/login"
             className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition inline-block"
           >
             Register
@@ -236,14 +236,14 @@ export default function Navbar() {
           {/* Buttons */}
           <div className="flex gap-4 mt-6">
             <a
-              href="/auth"
+              href="/login"
               className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition inline-block"
             >
               Login
             </a>
 
             <a
-              href="/auth"
+              href="/login"
               className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition inline-block"
             >
               Register
