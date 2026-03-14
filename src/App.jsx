@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Loader from "./components/Loader";
 import Home from "./Pages/Home";
+import AuthPage from "./Pages/AuthPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
 function App() {
@@ -15,7 +17,14 @@ function App() {
 
   if (loading) return <Loader />;
 
-  return <Home />;
+  return (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/auth" element={<AuthPage />} />
+    </Routes>
+  </BrowserRouter>
+);
 }
 
 export default App;

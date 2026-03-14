@@ -121,17 +121,16 @@ import { motion } from "framer-motion";
 import { FaBars, FaTimes, FaTruck, FaSearch } from "react-icons/fa";
 
 export default function Navbar() {
-
   const [open, setOpen] = useState(false);
   const [scroll, setScroll] = useState(false);
 
   const menu = [
-    {name:"Home", link:"/"},
-    {name:"Services", link:"#services"},
-    {name:"Tracking", link:"#tracking"},
-    {name:"Pricing", link:"#pricing"},
-    {name:"About", link:"#about"},
-    {name:"Contact", link:"#contact"}
+    { name: "Home", link: "/" },
+    { name: "Services", link: "#services" },
+    { name: "Tracking", link: "#tracking" },
+    { name: "Pricing", link: "#pricing" },
+    { name: "About", link: "#about" },
+    { name: "Contact", link: "#contact" },
   ];
 
   useEffect(() => {
@@ -144,41 +143,32 @@ export default function Navbar() {
   }, []);
 
   return (
-
-    <nav className={`fixed w-full z-50 transition-all duration-300 
-    ${scroll ? "bg-[#1f2033] text-white shadow-lg py-3" : "bg-white/80 backdrop-blur-lg py-4"}`}>
-
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 
+    ${scroll ? "bg-[#1f2033] text-white shadow-lg py-3" : "bg-white/80 backdrop-blur-lg py-4"}`}
+    >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4">
-
         {/* Logo */}
         <div className="flex items-center gap-2 text-xl md:text-2xl font-bold">
-          <FaTruck className="text-orange-500"/>
+          <FaTruck className="text-orange-500" />
           <span className="text-orange-500">FastCourier</span>
         </div>
 
-
         {/* Desktop Menu */}
         <ul className="hidden lg:flex gap-8 font-medium">
-
-          {menu.map((item,index)=>(
+          {menu.map((item, index) => (
             <li key={index}>
-              <a
-                href={item.link}
-                className="hover:text-orange-500 transition"
-              >
+              <a href={item.link} className="hover:text-orange-500 transition">
                 {item.name}
               </a>
             </li>
           ))}
-
         </ul>
-
 
         {/* Right Section */}
         <div className="hidden lg:flex items-center gap-4">
-
           <div className="flex items-center border rounded-lg px-3 py-2 bg-gray-50 w-48">
-            <FaSearch className="text-gray-400 mr-2"/>
+            <FaSearch className="text-gray-400 mr-2" />
             <input
               type="text"
               placeholder="Track Package"
@@ -186,84 +176,78 @@ export default function Navbar() {
             />
           </div>
 
-          <button className="px-4 py-2 border border-orange-500 text-orange-500 rounded-lg hover:bg-orange-500 hover:text-white transition">
+          <a
+            href="/auth"
+            className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition inline-block"
+          >
             Login
-          </button>
+          </a>
 
-          <button className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition">
+          <a
+            href="/auth"
+            className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition inline-block"
+          >
             Register
-          </button>
-
+          </a>
         </div>
-
 
         {/* Mobile Menu Button */}
         <div
           className="lg:hidden text-xl cursor-pointer"
-          onClick={()=>setOpen(!open)}
+          onClick={() => setOpen(!open)}
         >
-          {open ? <FaTimes/> : <FaBars/>}
+          {open ? <FaTimes /> : <FaBars />}
         </div>
-
       </div>
 
+      {/* Mobile Menu */}
+      <motion.div
+        initial={{ x: "-100%" }}
+        animate={{ x: open ? "0%" : "-100%" }}
+        transition={{ duration: 0.3 }}
+        className="lg:hidden fixed top-[64px] left-0 w-full bg-white shadow-lg"
+      >
+        <div className="px-6 py-6">
+          {/* Menu Links */}
+          <ul className="flex flex-col gap-6 text-lg font-medium text-gray-800">
+            {menu.map((item, index) => (
+              <li key={index}>
+                <a
+                  href={item.link}
+                  onClick={() => setOpen(false)}
+                  className="block border-b pb-2 hover:text-orange-500"
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-     {/* Mobile Menu */}
-<motion.div
-  initial={{ x: "-100%" }}
-  animate={{ x: open ? "0%" : "-100%" }}
-  transition={{ duration: 0.3 }}
-  className="lg:hidden fixed top-[64px] left-0 w-full bg-white shadow-lg"
->
+          {/* Tracking Input */}
+          <div className="flex items-center border rounded-lg px-3 py-2 mt-6">
+            <FaSearch className="text-gray-400 mr-2" />
+            <input
+              type="text"
+              placeholder="Track Package"
+              className="outline-none w-full"
+            />
+          </div>
 
-  <div className="px-6 py-6">
+          {/* Buttons */}
+          <div className="flex gap-4 mt-6">
+            <a
+              href="/auth"
+              className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition inline-block"
+            >
+              Login
+            </a>
 
-    {/* Menu Links */}
-    <ul className="flex flex-col gap-6 text-lg font-medium text-gray-800">
-
-      {menu.map((item,index)=>(
-        <li key={index}>
-          <a
-            href={item.link}
-            onClick={()=>setOpen(false)}
-            className="block border-b pb-2 hover:text-orange-500"
-          >
-            {item.name}
-          </a>
-        </li>
-      ))}
-
-    </ul>
-
-
-    {/* Tracking Input */}
-    <div className="flex items-center border rounded-lg px-3 py-2 mt-6">
-      <FaSearch className="text-gray-400 mr-2"/>
-      <input
-        type="text"
-        placeholder="Track Package"
-        className="outline-none w-full"
-      />
-    </div>
-
-
-    {/* Buttons */}
-    <div className="flex gap-4 mt-6">
-
-      <button className="flex-1 px-4 py-2 border border-orange-500 text-orange-500 rounded-lg">
-        Login
-      </button>
-
-      <button className="flex-1 px-4 py-2 bg-orange-500 text-white rounded-lg">
-        Register
-      </button>
-
-    </div>
-
-  </div>
-
-</motion.div>
-
+            <button className="flex-1 px-4 py-2 bg-orange-500 text-white rounded-lg">
+              Register
+            </button>
+          </div>
+        </div>
+      </motion.div>
     </nav>
   );
 }
