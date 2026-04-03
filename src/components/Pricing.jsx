@@ -21,7 +21,7 @@ export default function Pricing() {
         "Volume discounts for businesses",
         "Flexible payment options"
       ],
-      highlight: true
+      
     },
     {
       name: "International Shipping",

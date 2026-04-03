@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaBars, FaTimes, FaSearch } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import logo from "/images/WhatsApp Image 2026-04-03 at 11.59.02 AM.png";
 
 export default function Navbar() {
@@ -25,75 +26,93 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 
-      ${scroll ? "bg-[#f6efe5] shadow-md " : "bg-white/80 backdrop-blur-lg"}`}
-    >
-      <div className="max-w-7xl mx-auto flex justify-between items-center h-16 md:h-25 px-4">
-        
-        {/* Logo */}
-        <img
-          src={logo}
-          alt="logo"
-          className="h-20 md:h-50 w-auto object-contain mt-5"
-        />
+    <>
+      {/* Navbar */}
+      <nav
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 
+        ${scroll ? "bg-[#f6efe5] shadow-md" : "bg-white/80 backdrop-blur-lg"}`}
+      >
+        <div className="max-w-7xl mx-auto flex justify-between items-center h-20 md:h-24 px-4">
+          
+          {/* Logo */}
+          <img
+            src={logo}
+            alt="logo"
+            className="h-20 md:h-32 w-auto object-contain"
+          />
 
-        {/* Desktop Menu */}
-        <ul className="hidden lg:flex gap-8 font-medium">
-          {menu.map((item, index) => (
-            <li key={index}>
-              <a href={item.link} className="hover:text-[#2f4c71] transition">
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
+          {/* Desktop Menu */}
+          <ul className="hidden lg:flex gap-8 font-medium">
+            {menu.map((item, index) => (
+              <li key={index}>
+                <a href={item.link} className="hover:text-[#2f4c71] transition">
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-        {/* Desktop Right */}
-        <div className="hidden lg:flex items-center gap-4">
-          <div className="flex items-center border rounded-lg px-3 py-2 bg-gray-50 w-44">
-            <FaSearch className="text-gray-400 mr-2" />
-            <input
-              type="text"
-              placeholder="Track Package"
-              className="outline-none text-sm bg-transparent w-full"
-            />
+          {/* Desktop Right */}
+          <div className="hidden lg:flex items-center gap-4">
+            <div className="flex items-center border rounded-lg px-3 py-2 bg-gray-50 w-44">
+              <FaSearch className="text-gray-400 mr-2" />
+              <input
+                type="text"
+                placeholder="Track Package"
+                className="outline-none text-sm bg-transparent w-full"
+              />
+            </div>
+
+            <Link
+              to="/login"
+              className="px-4 py-2 bg-[#0F2A44] text-white rounded-lg hover:bg-[#2f4c71]"
+            >
+              Login
+            </Link>
+
+            <Link
+              to="/register"
+              className="px-4 py-2 border border-[#0F2A44] text-[#0F2A44] rounded-lg hover:bg-[#0F2A44] hover:text-white"
+            >
+              Register
+            </Link>
           </div>
 
-          <a
-            href="/login"
-            className="px-4 py-2 bg-[#0F2A44] text-white rounded-lg hover:bg-[#2f4c71]"
-          >
-            Login
-          </a>
-
-          <a
-            href="/register"
-            className="px-4 py-2 border border-[#0F2A44] text-[#0F2A44] rounded-lg hover:bg-[#0F2A44] hover:text-white"
-          >
-            Register
-          </a>
+          {/* Mobile Toggle */}
+          <div className="lg:hidden flex items-center text-xl">
+            <button onClick={() => setOpen(true)}>
+              <FaBars />
+            </button>
+          </div>
         </div>
+      </nav>
 
-        {/* Mobile Toggle */}
+      {/* Overlay */}
+      {open && (
         <div
-          className="lg:hidden text-xl cursor-pointer"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? <FaTimes /> : <FaBars />}
-        </div>
-      </div>
+          className="fixed inset-0 bg-black/40 z-40 lg:hidden"
+          onClick={() => setOpen(false)}
+        ></div>
+      )}
 
-      {/* Mobile Menu */}
+      {/* Mobile Sidebar */}
       <motion.div
         initial={{ x: "-100%" }}
         animate={{ x: open ? "0%" : "-100%" }}
         transition={{ duration: 0.3 }}
-        className="lg:hidden fixed top-16 left-0 w-full h-screen bg-white shadow-lg overflow-y-auto"
+        className="fixed top-0 left-0 w-[75%] max-w-xs h-full bg-white z-50 shadow-xl lg:hidden"
       >
-        <div className="px-5 py-6 space-y-6">
+        <div className="p-5 flex flex-col h-full">
           
-          {/* Links */}
+          {/* Top */}
+          <div className="flex justify-between items-center mb-6">
+            <img src={logo} alt="logo" className="h-10" />
+            <button onClick={() => setOpen(false)}>
+              <FaTimes size={20} />
+            </button>
+          </div>
+
+          {/* Menu */}
           <ul className="flex flex-col gap-5 text-lg font-medium">
             {menu.map((item, index) => (
               <li key={index}>
@@ -109,7 +128,7 @@ export default function Navbar() {
           </ul>
 
           {/* Search */}
-          <div className="flex items-center border rounded-lg px-3 py-2">
+          <div className="flex items-center border rounded-lg px-3 py-2 mt-6">
             <FaSearch className="text-gray-400 mr-2" />
             <input
               type="text"
@@ -118,24 +137,24 @@ export default function Navbar() {
             />
           </div>
 
-          {/* Buttons */}
-          <div className="flex flex-col gap-3">
-            <a
-              href="/login"
+          {/* Bottom Buttons */}
+          <div className="mt-auto flex flex-col gap-3 pt-6">
+            <Link
+              to="/login"
               className="w-full text-center px-4 py-3 bg-[#0F2A44] text-white rounded-lg"
             >
               Login
-            </a>
+            </Link>
 
-            <a
-              href="/register"
+            <Link
+              to="/register"
               className="w-full text-center px-4 py-3 border border-[#0F2A44] text-[#0F2A44] rounded-lg"
             >
               Register
-            </a>
+            </Link>
           </div>
         </div>
       </motion.div>
-    </nav>
+    </>
   );
 }

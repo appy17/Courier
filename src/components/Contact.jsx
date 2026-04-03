@@ -40,11 +40,12 @@ Message: ${form.message}`;
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center px-4 sm:px-6">
         {/* LEFT SIDE */}
         <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-          className="text-center md:text-left"
-        >
+  initial={{ opacity: 0, y: -40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  className="text-center md:text-left"
+>
           <img
             src="/images/callback.png"
             alt="contact"
@@ -66,7 +67,7 @@ Message: ${form.message}`;
 
         {/* RIGHT FORM */}
         <motion.div
-          initial={{ opacity: 0, x: 60 }}
+          initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
           className="space-y-4 sm:space-y-5"
