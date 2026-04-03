@@ -17,7 +17,7 @@ function Home() {
       <Hero />
       <Services />
       <Pricing />
-      <Stats />
+      {/* <Stats /> */}
       <Tracking />
       <DeliveryMap />
       <Testimonials />

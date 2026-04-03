@@ -5,8 +5,8 @@ export default function Pricing() {
   const plans = [
     {
       name: "Local Delivery",
-      price: "₹99",
       features: [
+        "Delivery Types- Medical Courier  Delivery Cargo-Van FreightOn Demand Delivery",
         "Same City Delivery",
         "Delivery within 24 hours",
         "Package tracking",
@@ -14,24 +14,23 @@ export default function Pricing() {
       ]
     },
     {
-      name: "National Shipping",
-      price: "₹299",
+      name: "Pricing Distance based pricing",
       features: [
-        "All India Delivery",
-        "2-4 Days Delivery",
-        "Real Time Tracking",
-        "Insurance Included"
+        " Load/weight based pricing Custom quotes available for businesses",
+        "Transparent pricing with no hidden fees",
+        "Volume discounts for businesses",
+        "Flexible payment options"
       ],
       highlight: true
     },
     {
       name: "International Shipping",
-      price: "₹999",
       features: [
-        "Worldwide Delivery",
-        "7-10 Days Delivery",
-        "Secure Packaging",
-        "Priority Support"
+        "Delivery Areas -California (Local & Regional)",
+        "Nearby states (future expansion)",
+        "Package tracking",
+        "Customer support",
+        "Customs clearance assistance"
       ]
     }
   ];
@@ -41,7 +40,7 @@ export default function Pricing() {
 
       {/* Heading */}
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 dark:text-white px-4">
-        Courier Pricing Plans
+        Service Info:
       </h2>
 
       {/* Cards */}
@@ -53,7 +52,7 @@ export default function Pricing() {
             whileHover={{ scale: 1.05 }}
             className={`p-6 sm:p-8 rounded-xl shadow-lg bg-white dark:bg-gray-800 
             transition-all
-            ${plan.highlight ? "border-4 border-orange-500" : ""}`}
+            ${plan.highlight ? "border-4 border-[#2f4c71]" : ""}`}
           >
 
             {/* Plan Name */}
@@ -62,7 +61,7 @@ export default function Pricing() {
             </h3>
 
             {/* Price */}
-            <p className="text-3xl sm:text-4xl font-bold text-orange-600 mb-6">
+            <p className="text-3xl sm:text-4xl font-bold text-[#0F2A44] mb-6">
               {plan.price}
             </p>
 
@@ -79,7 +78,7 @@ export default function Pricing() {
             </ul>
 
             {/* Button */}
-            <button className="mt-6 w-full bg-orange-500 text-white py-2.5 sm:py-3 rounded-lg hover:bg-orange-700 transition">
+            <button className="mt-6 w-full bg-[#0F2A44] text-white py-2.5 sm:py-3 rounded-lg hover:bg-[#2f4c71] transition">
               Choose Plan
             </button>
 

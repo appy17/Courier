@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate();
   return (
     <section
       id="home"
-      className="bg-[#ddb972] pt-24 md:pt-32 lg:pt-40 pb-16 md:pb-24 overflow-hidden bg-cover bg-center"
+      className="bg-[#2f4c71] pt-24 md:pt-32 lg:pt-40 pb-16 md:pb-24 overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage: "url('/images/hero-header-bg.png')",
       }}
@@ -15,20 +17,23 @@ export default function Hero() {
         <div className="text-center md:text-left">
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-800 mb-4">
-            A trusted provider of
+            About NGR Transport LLC
           </h2>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             courier services.
           </h1>
 
-          <p className="text-gray-600 text-base sm:text-lg mb-8 max-w-md mx-auto md:mx-0">
-            We deliver your products safely to your home in a reasonable time.
+          <p className="text-gray-900 text-base sm:text-lg mb-8 max-w-md mx-auto md:mx-0">
+            NGR Transport LLC is a trusted courier and logistics company specializing in medical deliveries and cargo van freight. We are committed to providing fast, secure, and reliable transportation solutions for healthcare providers and businesses across California.
           </p>
 
-          <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 transition mx-auto md:mx-0">
-            Get started →
-          </button>
+          <button
+  onClick={() => navigate("/")}   // 👈 change route here
+  className="bg-[#0F2A44] hover:bg-[#070b10] text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 transition mx-auto md:mx-0"
+>
+  Get started →
+</button>
 
         </div>
 

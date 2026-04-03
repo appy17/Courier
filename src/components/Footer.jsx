@@ -1,4 +1,5 @@
 import { FaCube } from "react-icons/fa";
+import logo from "/images/logo.jpeg"
 
 export default function Footer() {
   return (
@@ -15,13 +16,14 @@ export default function Footer() {
 
           <p className="text-gray-400 max-w-md text-sm sm:text-base">
             We ensure that your product is delivered in the safest possible
-            manner, at the correct location, at the right time.
+            manner, at the correct location, at the right time,
+             Fast. Secure Delivery You Can Trust
           </p>
         </div>
 
         {/* Right */}
         <div>
-          <p className="text-orange-500 font-semibold mb-3 text-sm">
+          <p className="text-white font-semibold mb-3 text-sm">
             SUBSCRIBE TO NEWSLETTER
           </p>
 
@@ -33,7 +35,7 @@ export default function Footer() {
               className="flex-1 bg-transparent border border-gray-500 px-4 py-3 rounded-lg outline-none text-sm"
             />
 
-            <button className="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg text-white font-medium text-sm">
+            <button className="bg-white hover:bg-[#2f4c71] px-6 py-3 rounded-lg text-black font-medium text-sm">
               Subscribe
             </button>
 
@@ -53,8 +55,11 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1">
 
             <div className="flex items-center gap-2 text-white text-lg sm:text-xl font-bold mb-4">
-              <FaCube className="text-orange-500" />
-              FastCourier
+              <img
+                          src={logo}
+                          alt="FastCourier Logo"
+                          className="h-15 md:h-30 w-auto object-contain"
+                        />
             </div>
 
             <p className="text-gray-400 text-sm">
@@ -112,7 +117,7 @@ export default function Footer() {
 
       {/* Bottom Footer */}
       <div className="border-t border-gray-700 py-5 text-center text-gray-400 text-sm">
-        © 2026 FastCourier. All Rights Reserved.
+        © 2026 NGR Transportation LLC. All Rights Reserved.
       </div>
 
     </footer>

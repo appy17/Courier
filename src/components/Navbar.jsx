@@ -119,6 +119,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaBars, FaTimes, FaTruck, FaSearch } from "react-icons/fa";
+import logo from "/images/WhatsApp Image 2026-04-03 at 11.59.02 AM.png"
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -145,20 +146,25 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 
-    ${scroll ? "bg-[#1f2033] text-white shadow-lg py-3" : "bg-white/80 backdrop-blur-lg py-4"}`}
+    ${scroll ? "bg-[#f6efe5] text-black shadow-lg  " : "bg-white/80 backdrop-blur-lg "}`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-4">
+      <div className="max-w-8xl mx-auto flex justify-between md:h-20 items-center px-4">
         {/* Logo */}
         <div className="flex items-center gap-2 text-xl md:text-2xl font-bold">
-          <FaTruck className="text-orange-500" />
-          <span className="text-orange-500">FastCourier</span>
+         
+
+          <img
+            src={logo}
+            alt="FastCourier Logo"
+            className="h-15 md:h-30 w-auto object-contain"
+          />
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden lg:flex gap-8 font-medium">
           {menu.map((item, index) => (
             <li key={index}>
-              <a href={item.link} className="hover:text-orange-500 transition">
+              <a href={item.link} className="hover:text-[#2f4c71] transition">
                 {item.name}
               </a>
             </li>
@@ -178,14 +184,14 @@ export default function Navbar() {
 
           <a
             href="/login"
-            className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition inline-block"
+            className="px-4 py-2 bg-[#0F2A44] text-white rounded-lg hover:bg-[#2f4c71] transition inline-block"
           >
             Login
           </a>
 
           <a
             href="/login"
-            className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition inline-block"
+            className="px-4 py-2 bg-[#0F2A44] text-white rounded-lg hover:bg-[#2f4c71] transition inline-block"
           >
             Register
           </a>

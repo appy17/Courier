@@ -15,7 +15,7 @@ export default function Loader() {
         </motion.div>
 
         <div className="mt-6 text-center text-gray-700 font-medium">
-          Delivering your experience...
+          Fast, Secure Delivery You Can Trust...
         </div>
 
       </div>

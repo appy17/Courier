@@ -13,7 +13,7 @@ export default function DeliveryMap() {
 
       {/* Header */}
       <div className="text-center mb-10 md:mb-12">
-        <p className="text-orange-500 font-semibold uppercase tracking-widest text-sm">
+        <p className="text-[#0F2A44] font-semibold uppercase tracking-widest text-sm">
           Find Us
         </p>
 
@@ -30,7 +30,7 @@ export default function DeliveryMap() {
         <div className="w-full h-[300px] sm:h-[400px] md:h-auto">
           <iframe
             title="map"
-            src="https://www.google.com/maps?q=San+Diego&output=embed"
+            src="https://www.google.com/maps?q=California,USA&output=embed"
             className="w-full h-full border-0"
             loading="lazy"
           />
@@ -47,12 +47,12 @@ export default function DeliveryMap() {
           <div className="space-y-4 sm:space-y-5 text-gray-600 text-sm sm:text-base">
 
             <div className="flex items-start gap-3">
-              <FaMapMarkerAlt className="text-orange-500 mt-1" />
-              <p>2277 Lorem Ave, San Diego, CA 22553</p>
+              <FaMapMarkerAlt className="text-[#0F2A44] mt-1" />
+              <p>California, USA</p>
             </div>
 
             <div className="flex items-start gap-3">
-              <FaPhoneAlt className="text-orange-500 mt-1" />
+              <FaPhoneAlt className="text-[#0F2A44] mt-1" />
               <p>
                 Monday - Friday: 10 am - 10pm <br />
                 Sunday: 11 am - 9pm
@@ -60,8 +60,8 @@ export default function DeliveryMap() {
             </div>
 
             <div className="flex items-start gap-3">
-              <FaEnvelope className="text-orange-500 mt-1" />
-              <p>info@quriarbox.com</p>
+              <FaEnvelope className="text-[#0F2A44] mt-1" />
+              <p>ssadiqullah.wahidi@gmail.com</p>
             </div>
 
           </div>
@@ -69,9 +69,9 @@ export default function DeliveryMap() {
 
           {/* Social Icons */}
           <div className="flex gap-4 mt-6 text-gray-400 text-lg">
-            <FaFacebookF className="cursor-pointer hover:text-orange-500 transition" />
-            <FaInstagram className="cursor-pointer hover:text-orange-500 transition" />
-            <FaTwitter className="cursor-pointer hover:text-orange-500 transition" />
+            <FaFacebookF className="cursor-pointer hover:text-[#2f4c71] transition" />
+            <FaInstagram className="cursor-pointer hover:text-[#2f4c71] transition" />
+            <FaTwitter className="cursor-pointer hover:text-[#2f4c71] transition" />
           </div>
 
         </div>
@@ -82,12 +82,12 @@ export default function DeliveryMap() {
       {/* Call Button */}
       <div className="flex justify-center mt-8 md:mt-10">
 
-        <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-3 rounded-lg flex items-center gap-3 text-sm sm:text-lg shadow transition">
+        <button className="bg-[#0F2A44] hover:bg-[#2f4c71] text-white px-6 sm:px-8 py-3 rounded-lg flex items-center gap-3 text-sm sm:text-lg shadow transition">
 
           <FaPhoneAlt />
 
           <span className="hidden sm:inline">
-            Call us to delivery 123-456789
+            Call us to delivery (916) 846-1985
           </span>
 
           <span className="sm:hidden">

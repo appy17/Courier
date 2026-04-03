@@ -23,7 +23,7 @@ export default function Tracking() {
           <div className="bg-white shadow-xl rounded-2xl p-3 sm:p-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 max-w-md mx-auto md:mx-0">
 
             <div className="flex items-center gap-2 flex-1">
-              <FaSearchLocation className="text-orange-500 text-lg sm:text-xl" />
+              <FaSearchLocation className="text-[#0F2A44] text-lg sm:text-xl" />
 
               <input
                 type="text"
@@ -32,7 +32,7 @@ export default function Tracking() {
               />
             </div>
 
-            <button className="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl hover:scale-105 transition">
+            <button className="bg-gradient-to-r from-blue-400 to-blue-600 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl hover:scale-105 transition">
               Track
             </button>
 

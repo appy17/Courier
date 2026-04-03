@@ -1,11 +1,22 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
 
 export default function AuthPage() {
   const [login, setLogin] = useState(true);
+  const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen grid md:grid-cols-2 bg-gray-50">
+    <div className="min-h-screen grid md:grid-cols-2 bg-gray-50 relative">
+
+      {/* 🔙 Fixed Back Button (Top Left - Mobile Style) */}
+      <button
+        onClick={() => navigate(-1)}
+        className="fixed top-5 left-5 z-50 flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md hover:bg-[#0F2A44] hover:text-white transition"
+      >
+        <FaArrowLeft />
+      </button>
 
       {/* Left Side Illustration */}
       <div className="hidden md:flex items-center justify-center bg-orange-100 relative overflow-hidden">
@@ -51,32 +62,33 @@ export default function AuthPage() {
               <input
                 type="text"
                 placeholder="Full Name"
-                className="w-full border px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-orange-400"
+                className="w-full border px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-[#0F2A44]"
               />
             )}
 
             <input
               type="email"
               placeholder="Email Address"
-              className="w-full border px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-orange-400"
+              className="w-full border px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-[#0F2A44]"
             />
 
             <input
               type="password"
               placeholder="Password"
-              className="w-full border px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-orange-400"
+              className="w-full border px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-[#0F2A44]"
             />
 
             {!login && (
               <input
                 type="password"
                 placeholder="Confirm Password"
-                className="w-full border px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-orange-400"
+                className="w-full border px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-[#0F2A44]"
               />
             )}
 
             <button
-              className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-semibold transition"
+              type="submit"
+              className="w-full bg-[#0F2A44] hover:bg-[#2f4c71] text-white py-3 rounded-lg font-semibold transition"
             >
               {login ? "Login" : "Register"}
             </button>
@@ -88,7 +100,7 @@ export default function AuthPage() {
             {login ? "Don't have an account?" : "Already have an account?"}
             <span
               onClick={() => setLogin(!login)}
-              className="ml-2 text-orange-500 font-semibold cursor-pointer"
+              className="ml-2 text-[#0F2A44] font-semibold cursor-pointer"
             >
               {login ? "Register" : "Login"}
             </span>
