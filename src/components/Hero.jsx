@@ -16,8 +16,8 @@ export default function Hero() {
         {/* LEFT TEXT */}
         <div className="text-center md:text-left">
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-800 mb-4">
-            About NGR Transport LLC
+          <h2 className="text-4xl sm:text-4xl md:text-6xl font-bold text-gray-800 mb-4">
+             NGR Transport LLC
           </h2>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
