@@ -221,7 +221,7 @@ export default function Navbar() {
                 <a
                   href={item.link}
                   onClick={() => setOpen(false)}
-                  className="block border-b pb-2 hover:text-orange-500"
+                  className="block border-b pb-2 hover:text-[#2f4c71] transition"
                 >
                   {item.name}
                 </a>
@@ -243,14 +243,14 @@ export default function Navbar() {
           <div className="flex gap-4 mt-6">
             <a
               href="/login"
-              className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition inline-block"
+              className="px-4 py-2 bg-[#0F2A44] text-white rounded-lg hover:bg-[#2f4c71] transition inline-block"
             >
               Login
             </a>
 
             <a
               href="/login"
-              className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition inline-block"
+              className="px-4 py-2 bg-[#0F2A44] text-white rounded-lg hover:bg-[#2f4c71] transition inline-block"
             >
               Register
             </a>

@@ -86,13 +86,11 @@ export default function DeliveryMap() {
 
           <FaPhoneAlt />
 
-          <span className="hidden sm:inline">
+          <span className=" sm:inline">
             Call us to delivery (916) 846-1985
           </span>
 
-          <span className="sm:hidden">
-            Call Us
-          </span>
+          
 
         </button>
 
