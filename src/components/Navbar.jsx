@@ -10,10 +10,11 @@ export default function Navbar() {
 
   const menu = [
     { name: "Home", link: "/" },
-    { name: "Services", link: "#services" },
+    { name: "About", link: "#services" },
+    { name: "Services", link: "#pricing" },
     { name: "Tracking", link: "#tracking" },
-    { name: "Pricing", link: "#pricing" },
-    { name: "About", link: "#about" },
+    // { name: "Pricing", link: "#pricing" },
+    
     { name: "Contact", link: "#contact" },
   ];
 
@@ -72,7 +73,7 @@ export default function Navbar() {
 
             <Link
               to="/register"
-              className="px-4 py-2 border border-[#0F2A44] text-[#0F2A44] rounded-lg hover:bg-[#0F2A44] hover:text-white"
+              className="px-4 py-2  bg-[#0F2A44] text-white border border-[#0F2A44]  rounded-lg hover:bg-[#2f4c71] hover:text-white"
             >
               Register
             </Link>
