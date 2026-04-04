@@ -9,7 +9,7 @@ import {
 
 export default function DeliveryMap() {
   return (
-    <section className="bg-[#f6efe5] py-12 md:py-16 px-4 sm:px-6">
+    <section className="bg-[#f6efe5] px-4 sm:px-6">
 
       {/* Header */}
       <div className="text-center mb-10 md:mb-12">

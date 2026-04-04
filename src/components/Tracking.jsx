@@ -51,10 +51,10 @@ export default function Tracking() {
 >
 
           <img
-            src="/images/tracking.png"
-            alt="tracking"
-            className="w-[260px] sm:w-[360px] md:w-[420px] lg:w-[520px] xl:w-[600px]"
-          />
+  src="/images/tracking.png"
+  alt="tracking"
+  className="w-full max-w-[600px] mx-auto sm:w-[360px] md:w-[420px] lg:w-[520px] xl:w-[600px]"
+/>
 
         </motion.div>
 
