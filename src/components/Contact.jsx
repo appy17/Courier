@@ -15,7 +15,7 @@ export default function Contact() {
   };
 
   const sendToWhatsApp = () => {
-    const phoneNumber = "9403575320"; // 👉 your WhatsApp number (with country code, no +)
+    const phoneNumber = "9168461985"; // 👉 your WhatsApp number (with country code, no +)
 
     const text = `Hello, I have a query:
     
