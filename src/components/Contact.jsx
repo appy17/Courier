@@ -104,7 +104,7 @@ Message: ${form.message}`;
 
           <button
             onClick={sendToWhatsApp}
-            className="bg-[#0F2A44] text-white px-6 py-3 rounded-lg flex items-center gap-2"
+            className="bg-[#0F2A44] md:mb-2.5 mb-5 text-white px-6 py-3 rounded-lg flex items-center gap-2"
           >
             Send Message <FaPaperPlane />
           </button>
